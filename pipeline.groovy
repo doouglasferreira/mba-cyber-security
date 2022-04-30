@@ -11,8 +11,8 @@ pipeline {
             steps {
                 script {
                     echo 'fazer build do projeto'
-                    sh "ls -la"
-                    sh "pwd"
+                     git branch: 'master', url: 'https://github.com/paulonill/exemplo-spring-mvc-thymeleaf.git'
+                     sh "ls -la"
                         
                 }
             }
