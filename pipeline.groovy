@@ -27,8 +27,7 @@ pipeline {
                 }
             }
         } 
-    
-         stage('deploy to stage') {
+        stage('deploy to stage') {
             steps {
                 script {
                     echo 'fazendo o deploy do projeto'
@@ -43,17 +42,18 @@ pipeline {
                 script {
                     echo 'acceptance test projeto'
                     sh "ls -la"
-                    sh "pwd"
-                        
+                    sh "pwd"      
                 }
             }
         }
-    
-     stage('deploy to prodution') {
+          stage('deploy to prodution') {
             steps {
                 script {
                     echo 'deploy to prodution do projeto'
                     sh "ls -la"
                     sh "pwd"
+                }
+            }
+         }
     }
 }
